@@ -1,0 +1,1223 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    /* color:; */
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bf {
+    color: #101c44;
+}
+
+
+.main-scroll {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1cc3b2;
+    border-radius: 10px;
+}
+
+/* header css start */
+
+
+header {
+    background-color: #fff;
+    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.10);
+    padding: 0.75rem 0;
+    z-index: 9999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+/* Sticky Header Effects */
+.nav-item a:hover .guide-menu{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #000;
+}
+
+.guide-menu ul {
+    display: block;
+    margin: 10px;
+}
+
+.guide-menu ul li {
+    width: max-content;
+    padding: 10px;
+}
+
+.guide-menu{
+    display: none;
+}
+
+.nav-item a svg {
+    width: 12px;
+    height: 20px;
+    padding: 0;
+}
+
+.nav-item a svg:hover {
+   color: #1cc3b2;
+}
+
+.nav-item a:hover .guide-menu {
+    display: block;
+}
+
+.guide-menu ul {
+    display: block !important;
+}
+.nav-item {
+    position: relative;
+}
+
+.guide-menu {
+    position: absolute;
+    top: 100%; /* appears just below the nav item */
+    right: 0;
+    background: #101c44;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+/* When hovering the nav item, show the dropdown smoothly */
+.nav-item:hover .guide-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.guide-menu ul li a {
+    color: #fff;
+    font-size: 16px;
+}
+
+.navbar ul li:hover .guide-menu{
+    display: block !important;
+}
+/* --------------------- */
+
+header.sticky {
+    border-bottom: 0.0625rem solid rgba(255, 200, 39, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.16) 0rem 0.0625rem 0.25rem;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+}
+
+.navbar img {
+    max-width: 9.5rem;
+    justify-self: start;
+    /* margin-left: 1.25rem; */
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar ul li {
+    padding: 0 0 0 15px;
+}
+
+.nav-item a {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    position: relative;
+    padding-bottom: 6px;
+}
+
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 0.3125rem;
+    height: 0.09375rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1cc3b2;
+    transform-origin: center;
+    transition: all 0.3sease-out;
+}
+
+.logo {
+    background-image: url(../images/logo.png);
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 43px;
+}
+
+.nav-item a.active::after {
+    transform: scaleX(0.9);
+    transform-origin: center;
+}
+
+.nav-item a.active,
+.nav-item a:hover {
+    color: #1cc3b2;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+.mt-60 {
+    margin-top: 60px;
+}
+
+.mb-80 {
+    margin-bottom: 80px;
+}
+
+.pt-80 {
+    padding-top: 80px;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
+
+.mt-80 {
+    margin-top: 80px;
+}
+
+.pt-120 {
+    padding-top: 120px;
+}
+
+.pb-80 {
+    padding-bottom: 80px;
+}
+
+.py-80 {
+    padding: 80px 0;
+}
+
+.bg_light {
+    background-color: #fff;
+}
+
+.text_dark {
+    color: #191919;
+}
+
+/* 
+=================================
+Mobile Menu Styles
+=================================
+*/
+.menu-toggle {
+    justify-self: end;
+    margin-right: 1.5625rem;
+    display: none;
+    position: relative;
+}
+
+.menu-toggle .bar {
+    width: 1.5625rem;
+    height: 0.1875rem;
+    background-color: #000;
+    margin: 0.3125rem auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle:hover {
+    cursor: pointer;
+}
+
+/* Mobile Menu Active State */
+
+#mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(0.5rem) rotate(45deg);
+}
+
+#mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-0.5rem) rotate(-45deg);
+}
+
+/* 
+=================================
+Keyframe Animations
+=================================
+*/
+@keyframes gradbar {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* banner section css start */
+
+.hero-bg {
+    background-image: url(../images/home-banner.png);
+    width: 100%;
+    padding: 140px 0;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: 640px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    z-index: 1;
+}
+
+.hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000066;
+    z-index: -1;
+}
+
+.hero-bnr {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.swiper {
+    width: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.hero-text {
+    max-width: 900px;
+    margin: auto;
+    transition: opacity 1s ease-in-out;
+    margin-bottom: 100px;
+    padding: 0 15px;
+}
+
+.hero-text2 p {
+    font-size: 18px;
+    line-height: 25px;
+    color: #fff;
+}
+
+.hero-text2 {
+    margin-top: 2rem;
+}
+
+
+.hero-text h1 {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+/* --------------------- */
+.custom-shape-divider-bottom-1748437586 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1748437586 svg {
+    position: relative;
+    display: block;
+    width: calc(102% + 1.3px);
+    height: 109px;
+}
+
+.custom-shape-divider-bottom-1748437586 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/* ----------------------------------------- */
+
+
+/* banner section end */
+
+
+
+.after-banner {
+    position: relative;
+    z-index: 1;
+
+}
+
+.after-banner-image {
+    position: absolute;
+    top: -180px;
+    left: 0;
+    width: 100%;
+    height: 480px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.after-banner-inner {
+    padding: 30px 0px 60px 0;
+    text-align: center;
+    border-bottom: 2px solid #000;
+}
+
+.heading h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    padding-bottom: 20px;
+    line-height: 40px;
+}
+
+
+/* modern team canada css start */
+
+.modern-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 280px;
+    border-radius: 30px 0;
+}
+
+.modern-text {
+    border: 1px solid #0000006b;
+    padding: 10px;
+        background: #101c44;
+    height: 100%;
+    border-radius: 0px 30px;
+}
+
+.modern-text p {
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.modern-text h5 {
+    color: #fff;
+}
+
+/* modern team canada css end */
+
+
+
+
+/* all your travel css start */
+
+.all-your-travel-text ul li {
+    position: relative;
+    padding-left: 25px;
+    padding-bottom: 15px;
+}
+
+.all-your-travel-text ul li::before {
+    position: absolute;
+    content: ".";
+    top: -51px;
+    left: 0px;
+    font-size: 60px;
+    color: #000;
+}
+
+.all-your-travel-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 330px;
+}
+
+
+/* all your travel css start */
+
+
+
+
+/* understand canadian business css start */
+
+.canadian-business-heading h5 {
+    font-size: 22px;
+    color: #000;
+    font-weight: 600;
+    line-height: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000;
+    width: 37%;
+}
+
+.canadian-business-heading span {
+    font-size: 22px;
+    color: #1cc3b2;
+}
+
+
+.canadian-business-heading h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    line-height: 120%;
+    margin-bottom: 30px;
+}
+
+.right-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 49%;
+    height: 280px;
+    display: block;
+    border: 3px solid #000;
+}
+
+.canadian-right-image {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-between;
+}
+
+
+/* understand canadian business css end */
+
+
+
+/* make travel css start */
+
+.make-travel {
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.make-travel-inner h2 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 50px;
+    margin-bottom: 30px;
+}
+
+.make-travel-inner p {
+    font-size: 18px;
+    color: #000;
+    line-height: 25px;
+    margin-bottom: 0;
+}
+
+.make-travel-inner {
+    padding: 0 130px;
+}
+
+
+/* make travel css end */
+
+
+/* form page css start */
+
+
+
+.heading p {
+    font-size: 19px;
+    line-height: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+#contact {
+    background-image: url("../images/download.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 25px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    height: 100%;
+}
+
+fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact select {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.contact-us-form-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 310px;
+}
+
+.custom-button {
+    background-color: #1cc3b2;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-button:hover {
+    background-color: #17a89a;
+    /* slightly darker for hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.custom-button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* form page css end */
+
+
+
+
+/* footer css start */
+
+
+.footer_disclaimer {
+    margin-bottom: 2.2rem;
+    text-align: center;
+}
+
+.footer_disclaimer h4 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.footer_disclaimer p {
+    color: #fff;
+}
+
+.copyright p {
+    color: #fff;
+}
+
+.footer_navbar {
+    border-bottom: 1px solid gray;
+    padding-bottom: 2.2rem;
+}
+
+.footer_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 2rem;
+}
+
+.footer_item a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+.footer_item a:hover {
+    color: #1cc3b2;
+}
+
+.footer_btm {
+    padding-block: 24px;
+}
+
+
+.footer_btmWrapp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ssl {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.footer {
+    background: #101c44;
+}
+
+.sslLink {
+    background-image: url("../images/ssl-BezeXFKS.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 134px;
+    width: 100%;
+    height: 40px;
+    display: inline-block;
+}
+
+.socials {
+    padding-block: 2rem;
+}
+
+.social_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social a {
+    width: 2.8rem;
+    height: 2.8rem;
+    border: 1px solid gray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+.social a:hover {
+    background-color: #1cc3b2;
+    border-color: transparent;
+    transform: translateY(-10px);
+    color: #fff;
+}
+
+.social i {
+    font-size: 24px;
+    color: #000;
+}
+
+.social a svg {
+    height: 100%;
+    width: 100%;
+    fill: #fff;
+    padding: 9px;
+}
+
+.social svg {
+    padding: 5px;
+}
+
+/* footer css end */
+
+
+/* flight page css start */
+
+
+/* flight banner css start  */
+
+.personal-banner {
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    width: 100%;
+    height: 29.625rem;
+    position: relative;
+}
+
+.personal-banner::before {
+    content: '';
+    position: absolute;
+    background: rgba(0 0 0 / 40%);
+    background-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.banner_personal {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    width: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.banner_personal h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.custom-shape-divider-bottom-1748522495 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1748522495 svg {
+    position: relative;
+    display: block;
+    width: calc(108% + 1.3px);
+    height: 113px;
+}
+
+.custom-shape-divider-bottom-1748522495 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/* flight banner css end */
+
+
+
+
+
+/* make flight booking css start */
+
+.make-flight-booking {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+.make-flight-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}
+
+.flight-text {
+    background: #fff;
+    padding: 30px;
+}
+
+.flight-text h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+}
+
+.make-flight-heading h2 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.make-flight-main {
+    padding: 20px;
+    border: 1px solid #f7f6f69c;
+    backdrop-filter: blur(3px);
+    height: 100%;
+}
+
+.flight-text p {
+    margin-bottom: 0;
+}
+
+/* make flight booking css start */
+
+
+
+/* costly and simplify css start */
+
+.heading-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 30px;
+}
+
+.costly-heading h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.costly-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}
+
+.costly-text {
+    padding: 20px 0;
+}
+
+.costly-text h4 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #000;
+}
+
+
+/* costly and simplify css end */
+
+
+/* step up your account css start */
+.step-up-text ul li {
+    padding-left: 20px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.step-up-text ul li::before {
+    content: ".";
+    position: absolute;
+    top: -51px;
+    font-size: 60px;
+    left: -3px;
+    color: #000;
+}
+
+.step-up-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+}
+
+.step-up-text {
+    padding: 10px 0;
+}
+
+.step-up-main {
+    padding: 20px;
+    border: 1px solid #00000045;
+    backdrop-filter: blur(5px);
+    height: 100%;
+}
+
+/* step up your account css end */
+
+
+/* FAQs css start */
+.wrapper {
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.faqs-container {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px 0 rgb(0, 0, 0, 0.25);
+    margin: 20px 0;
+}
+
+.question {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 20px 80px 20px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.question::after {
+    content: "\002B";
+    font-size: 2.2rem;
+    position: absolute;
+    right: 20px;
+    transition: 0.2s;
+}
+
+.question.active::after {
+    transform: rotate(45deg);
+}
+
+.answercont {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.answer {
+    padding: 0 20px 20px;
+    line-height: 1.5rem;
+}
+
+.question.active+.answercont {}
+
+@media screen and (max-width: 790px) {
+    html {
+        font-size: 14px;
+    }
+
+    .wrapper {
+        width: 80%;
+    }
+}
+
+/* why it work css start */
+.why-it-work-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    border: 3px solid #000;
+}
+
+.why-it-work-text h2 {
+    color: #000;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+
+/* term and condition css start */
+
+.personal-page-content ul {
+    padding-left: 20px;
+}
+
+
+
+.personal-page-content h2 {
+    font-size: 30px;
+    line-height: 1.4;
+    color: #181818;
+    margin-bottom: 10px;
+}
+
+.personal-page-content p {
+    font-size: 16px;
+    line-height: 25px;
+    color: #181818;
+    margin-bottom: 10px;
+}
+
+.personal-page-content h4 {
+    font-size: 20px;
+    color: #181818;
+    font-size: 20px;
+    margin-bottom: 0.9375rem;
+    line-height: 1.4;
+}
+
+.personal-page-content p a {
+    color: #000;
+}
+
+.personal-page-content p a:hover {
+    color: #ab8965;
+}
+
+.personal-page-content ul li {
+    list-style: none;
+    position: relative;
+}
+
+.personal-page-content ul li::before {
+    content: ".";
+    position: absolute;
+    color: #000;
+    border-radius: 50%;
+    left: -21px;
+    top: -51px;
+    font-size: 60px;
+}
+
+/* term and condition css end */
+
+
+
+/* about twables css start */
+
+.about-twables-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 560px;
+}
+
+.about-twables-text h4 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.about-twables-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 35px;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.about-twables-text p {
+    font-size: 16px;
+    color: #000;
+    line-height: 25px;
+}
+
+/* about twables css end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
