@@ -1,9 +1,5 @@
-@media only screen and (max-width: 991px) {
-    html {
-        font-size: 15px;
-    }
-
-    .navbar ul {
+@media screen and (max-width:1199px){
+        .navbar ul {
         display: flex;
         flex-direction: column;
         position: fixed;
@@ -51,6 +47,15 @@
         opacity: 1 !important;
         visibility: visible !important;
     }
+}
+
+
+@media only screen and (max-width: 991px) {
+    html {
+        font-size: 15px;
+    }
+
+
 
     .hero-bg {
         padding: 70px 0;
