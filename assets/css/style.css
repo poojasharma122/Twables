@@ -493,7 +493,7 @@ Keyframe Animations
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    border-radius: 30px 0;
+    border-radius: 30px 0 0;
 }
 
 .modern-text {
@@ -501,7 +501,7 @@ Keyframe Animations
     padding: 60px;
     background: #101c44;
     height: 100%;
-    border-radius: 0px 30px;
+    border-radius: 0px 30px 0 0;
 }
 
 .modern-text p {

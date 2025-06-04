@@ -1,5 +1,5 @@
 @media screen and (max-width:1199px) {
-    .navbar ul {
+    .navbar > ul {
         display: flex;
         flex-direction: column;
         position: fixed;
@@ -117,8 +117,21 @@
     }
 
     .canadian-right-image {
-    gap: 20px;
-}
+        gap: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    .footer_list {
+        margin-top: 20px;
+    }
+
+    .our-value-text {
+        height: 310px;
+    }
 }
 
 
@@ -134,4 +147,21 @@
     .ssl {
         width: 100%;
     }
+
+    .hero-text h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .banner_personal h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .after-banner-inner h2 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+
 }
