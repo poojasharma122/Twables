@@ -1040,11 +1040,15 @@ fieldset {
 /* FAQs css start */
 .wrapper {
     width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-h1 {
-    margin-bottom: 20px;
+.faqs.second {
+    background: #101c44;
 }
+
+
 
 .faqs-container {
     background-color: white;

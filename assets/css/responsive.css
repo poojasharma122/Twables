@@ -1,5 +1,5 @@
-@media screen and (max-width:1199px){
-        .navbar ul {
+@media screen and (max-width:1199px) {
+    .navbar ul {
         display: flex;
         flex-direction: column;
         position: fixed;
@@ -99,7 +99,16 @@
     .pt-80 {
         padding-top: 40px;
     }
+
     .right-image {
-    width: 100%;
+        width: 100%;
+    }
+
+    .make-travel-inner {
+        padding: 0px;
+    }
+
+    .after-banner-inner {
+    padding: 0px 0px 30px 0;
 }
 }
