@@ -1034,6 +1034,7 @@ fieldset {
     color: #000;
 }
 
+
 .step-up-image {
     background-position: center;
     background-repeat: no-repeat;
@@ -1325,12 +1326,16 @@ fieldset {
 }
 
 .our-value-text {
-    padding: 10px;
+    padding: 15px;
     background: #101c44;
     border: 3px solid #000;
     height: 100%;
     border-radius: 20px 0;
     color: #fff;
+}
+
+.our-value-text ul li {
+    padding-bottom: 8px;
 }
 
 /* our value css end */
@@ -1341,4 +1346,8 @@ fieldset {
 
 .ul-para {
     padding-top: 10px;
+}
+
+.personal-page-content p a:hover {
+    color: #0dcaf0;
 }
