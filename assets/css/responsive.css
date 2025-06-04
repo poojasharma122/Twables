@@ -9,7 +9,7 @@
         width: 100%;
         height: 100vh;
         text-align: center;
-        overflow: hidden;
+        overflow: auto;
         left: 0;
         opacity: 0;
         visibility: hidden;
@@ -46,6 +46,14 @@
     .mobile-nav {
         opacity: 1 !important;
         visibility: visible !important;
+    }
+
+    .guide-menu {
+
+        left: 50%;
+        transform: translateX(-50%) !important;
+
+
     }
 }
 

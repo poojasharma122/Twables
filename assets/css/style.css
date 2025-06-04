@@ -126,6 +126,7 @@ header {
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 1000;
+    padding-bottom: 20px;
 }
 
 /* When hovering the nav item, show the dropdown smoothly */
