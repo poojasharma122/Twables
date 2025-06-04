@@ -109,21 +109,29 @@
     }
 
     .after-banner-inner {
-    padding: 0px 0px 30px 0;
+        padding: 0px 0px 30px 0;
+    }
+
+    .modern-image {
+        height: 300px;
+    }
+
+    .canadian-right-image {
+    gap: 20px;
 }
 }
 
 
-@media(max-width:575px){
+@media(max-width:575px) {
     .make-travel-inner h2 {
-    font-size: 32px;
-    line-height: 40px;
-}
+        font-size: 32px;
+        line-height: 40px;
+    }
 }
 
 
-@media(max-width:425px){
+@media(max-width:425px) {
     .ssl {
-    width: 100%;
-}
+        width: 100%;
+    }
 }
