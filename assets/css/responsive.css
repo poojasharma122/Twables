@@ -63,7 +63,9 @@
         font-size: 15px;
     }
 
-
+section.step-up-account {
+    padding-bottom: 60px;
+}
 
     .hero-bg {
         padding: 70px 0;
@@ -140,6 +142,9 @@
     .our-value-text {
         height: 310px;
     }
+    section.step-up-account {
+    padding-bottom: 40px;
+}
 }
 
 
@@ -148,6 +153,9 @@
         font-size: 32px;
         line-height: 40px;
     }
+    .footer_logo {
+    width: 10.75rem;
+}
 }
 
 
