@@ -49,3 +49,12 @@ document.querySelector(".form-wrapper").addEventListener("submit", function(e) {
 
 
   AOS.init(1200);
+
+
+
+         $(document).ready(function() {
+    $(".nav_dropdown").click(function(e) {
+        e.preventDefault(); 
+        $(this).next().slideToggle();
+    });
+});

@@ -71,10 +71,10 @@ header {
 
 /* Sticky Header Effects */
 .nav-item a:hover .guide-menu {
-    display: block;
+    /* display: block;
     position: absolute;
     left: 0;
-    top: 100%;
+    top: 100%; */
     background-color: #000;
 }
 
@@ -114,27 +114,30 @@ header {
     position: relative;
 }
 
+.contact-us-page-form-section {
+    overflow: hidden;
+}
+
 .guide-menu {
     position: absolute;
     top: 100%;
-    /* appears just below the nav item */
     right: -40px;
     background: #101c44;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateY(10px);
-    pointer-events: none;
+    /* opacity: 0; */
+    /* transform: translateY(10px); */
+    /* pointer-events: none; */
     transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 1000;
     padding-bottom: 20px;
 }
 
 /* When hovering the nav item, show the dropdown smoothly */
-.nav-item:hover .guide-menu {
+/* .nav-item:hover .guide-menu {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
-}
+} */
 
 .guide-menu ul li a {
     color: #fff;
@@ -142,9 +145,9 @@ header {
     margin-bottom: 8px;
 }
 
-.navbar ul li:hover .guide-menu {
+/* .navbar ul li:hover .guide-menu {
     display: block !important;
-}
+} */
 
 /* --------------------- */
 
