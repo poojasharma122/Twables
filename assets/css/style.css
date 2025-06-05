@@ -733,6 +733,7 @@ fieldset {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #101c44;
+    overflow: hidden;
 }
 
 .footer_logo {
