@@ -45,3 +45,7 @@ question.forEach(question => {
 document.querySelector(".form-wrapper").addEventListener("submit", function(e) {
   e.preventDefault(); 
 });
+
+
+
+  AOS.init(1200);

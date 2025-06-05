@@ -1447,3 +1447,8 @@ fieldset {
 section.step-up-account {
     padding-bottom: 80px;
 }
+
+
+.aoshide{
+    overflow: hidden;
+}
