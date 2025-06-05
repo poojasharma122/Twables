@@ -180,10 +180,13 @@
     .footer_logo {
         width: 10.75rem;
     }
+    .question {
+    font-size: 1rem;
+}
 }
 
 
-@media(max-width:425px) {
+@media(max-width:475px) {
     .personal-page-content h2 {
         font-size: 25px;
         line-height: 30px;
