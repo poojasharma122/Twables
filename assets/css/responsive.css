@@ -2,6 +2,7 @@
     .navbar>ul {
         padding: 60px 0;
         display: flex;
+        display: block;
         flex-wrap: wrap;
         position: fixed;
         justify-content: start;
@@ -17,6 +18,10 @@
         transition: opacity 0.4s ease, visibility 0.4s ease;
         z-index: 9999;
         gap: 10px;
+    }
+
+    .navbar ul li {
+        padding-top: 15px;
     }
 
     .personal_banner {
@@ -63,6 +68,14 @@
 
     .guide-menu ul li a {
         margin-bottom: 0;
+    }
+
+    .navbar li {
+        line-height: 1;
+    }
+
+    .nav-item a {
+        padding-bottom: 0;
     }
 }
 
