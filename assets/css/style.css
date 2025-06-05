@@ -612,7 +612,7 @@ Keyframe Animations
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgba(0 0 0/60%);
+    background-color: rgba(0 0 0/65%);
     background-blend-mode: multiply;
 }
 
@@ -984,6 +984,8 @@ fieldset {
     display: flex;
     justify-content: center;
     background-attachment: fixed;
+    background-color: rgba(0 0 0/75%);
+    background-blend-mode: multiply;
 }
 
 .make-flight-image {
@@ -1015,11 +1017,17 @@ fieldset {
 
 .make-flight-main {
     padding: 20px;
-    border: 1px solid #f7f6f69c;
     backdrop-filter: blur(3px);
     height: 100%;
+    box-shadow: #17a89a 0px 2px 8px 0px;
+    transition: 0.2s all ease-in-out;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
 }
-
+.make-flight-main:hover{
+    transform: translateY(-3px);
+}
 .flight-text p {
     margin-bottom: 0;
 }
@@ -1054,11 +1062,23 @@ fieldset {
     width: 100%;
     height: 200px;
 }
-
-.costly-text {
-    padding: 20px 0;
+.costly-main {
+  box-shadow: #17a89a 0px 1px 4px;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 0.2s all ease-in-out;
 }
-
+.costly-main:hover{
+transform: translateY(-2px);
+}
+.costly-text {
+    padding: 1.25rem;
+}
+.costly-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .costly-text h4 {
     font-size: 24px;
     font-weight: 700;
@@ -1402,4 +1422,9 @@ fieldset {
 
 .personal-page-content p a:hover {
     color: #0dcaf0;
+}
+
+
+.bg_light{
+    background-color: #f5f5f7;
 }
