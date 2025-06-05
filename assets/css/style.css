@@ -1449,6 +1449,6 @@ section.step-up-account {
 }
 
 
-.aoshide{
+.aoshide ,.scroll-anim{
     overflow: hidden;
 }
