@@ -393,6 +393,14 @@
     <script src="assets/js/jquery.js"></script>    
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/main.js"></script>
+        <script>
+        $(document).ready(function () {
+            $(".nav_dropdown").click(function (e) {
+                e.preventDefault();
+                $(this).next().slideToggle();
+            });
+        });
+    </script>
 </body>
 
 </html>
