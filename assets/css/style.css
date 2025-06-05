@@ -791,7 +791,7 @@ fieldset {
 }
 
 .footer-links a:hover {
-    color: #FF5722;
+    color: #17a89a;
 }
 
 .footer a i {
@@ -856,7 +856,7 @@ fieldset {
 }
 
 .after-footer .col-12 a:hover {
-    color: #afbff9;
+    color: #17a89a;
 }
 .follow_heading {
     font-size: 1.6rem;
@@ -891,7 +891,7 @@ fieldset {
     padding-left: 0.4375rem;
 }
 .social-links a svg {
-    fill:#101c44;
+    fill:#17a89a;
     height: 100%;
     width: 100%;
 }
